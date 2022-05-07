@@ -2,15 +2,16 @@
 #define ENDCALC_H
 
 #include <QDialog>
-#include "Table.h"
+#include <QMessageBox>
 #include "funcs.h"
+#include "Table.h"
+#include "storage.h"
 
+extern Storage globalStorage;
 extern Table table;
 
 extern float RAir;
 extern float RFuel;
-extern float a;
-extern float L0;
 
 namespace Ui {
 class EndCalc;
@@ -35,8 +36,12 @@ private slots:
 
     void on_pb_calcMix_clicked();
 
+    void on_pastePushButton_clicked();
+
 private:
     Ui::EndCalc *ui;
+    float local_a;
+    float local_L0;
 };
 
 #endif // ENDCALC_H

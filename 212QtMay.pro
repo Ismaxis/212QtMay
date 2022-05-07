@@ -16,7 +16,8 @@ SOURCES += \
     2modules/funcs.cpp \
     2modules/tempcalc.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    storage.cpp
 
 HEADERS += \
     2modules/Sheet.h \
@@ -27,7 +28,8 @@ HEADERS += \
     2modules/funcs.h \
     2modules/tableData.h \
     2modules/tempcalc.h \
-    mainwindow.h
+    mainwindow.h \
+    storage.h
 
 FORMS += \
     2modules/capacitycalc.ui \

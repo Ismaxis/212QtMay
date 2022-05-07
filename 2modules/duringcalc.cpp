@@ -6,6 +6,28 @@ DuringCalc::DuringCalc(QWidget *parent) :
     ui(new Ui::DuringCalc)
 {
     ui->setupUi(this);
+
+    if(!globalStorage.isEmpty_a())
+    {
+        local_a = globalStorage.get_a();
+        ui->paste_a_lineEdit->setPlaceholderText(QString::number(local_a));
+    }
+    else
+    {
+        ui->paste_a_lineEdit->setPlaceholderText("Enter alfa");
+        local_a = -1.0f;
+    }
+
+    if(!globalStorage.isEmpty_L0())
+    {
+        local_L0 = globalStorage.get_L0();
+        ui->paste_L0_lineEdit->setPlaceholderText(QString::number(local_L0));
+    }
+    else
+    {
+        ui->paste_L0_lineEdit->setPlaceholderText("Enter L0");
+        local_L0 = -1.0f;
+    }
 }
 
 DuringCalc::~DuringCalc()
@@ -63,11 +85,62 @@ void DuringCalc::on_pb_calcFuel_clicked()
 
 void DuringCalc::on_pb_calcMix_clicked()
 {
+    if(local_a == -1)
+    {
+        QMessageBox::warning(this, "Error", "Enter value for alfa");
+        return;
+    }
+    if(local_L0 == -1)
+    {
+        QMessageBox::warning(this, "Error", "Enter value for L0");
+        return;
+    }
+
     float CpAirAvg = ui->le_capAir->text().toFloat();
     float CpFuelAvg = ui->le_capFuel->text().toFloat();
 
-    float CAvgMix = Cpmix(a, L0, CpAirAvg, CpFuelAvg); // avg capacity of mix during process
+    float CAvgMix = Cpmix(local_a, local_L0, CpAirAvg, CpFuelAvg); // avg capacity of mix during process
 
     ui->output_mix->setText(QString::number(CAvgMix));
+}
+
+
+void DuringCalc::on_pastePushButton_clicked()
+{
+    if(ui->paste_a_lineEdit->text().isEmpty())
+    {
+        if(globalStorage.get_a() != -1.0f)
+        {
+            local_a = globalStorage.get_a();
+        }
+        else
+        {
+            QMessageBox::warning(this, "Error", "Enter value for alfa");
+            return;
+        }
+    }
+    else
+    {
+        local_a = ui->paste_a_lineEdit->text().toFloat();
+    }
+    ui->le_a->setText(QString::number(local_a));
+
+    if(ui->paste_L0_lineEdit->text().isEmpty())
+    {
+        if(globalStorage.get_L0() != -1.0f)
+        {
+            local_L0 = globalStorage.get_L0();
+        }
+        else
+        {
+            QMessageBox::warning(this, "Error", "Enter value for L0");
+            return;
+        }
+    }
+    else
+    {
+        local_L0 = ui->paste_L0_lineEdit->text().toFloat();
+    }
+    ui->le_L0->setText(QString::number(local_L0));
 }
 
