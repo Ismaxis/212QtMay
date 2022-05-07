@@ -2,15 +2,16 @@
 #define ENDCALC_H
 
 #include <QDialog>
-#include "Table.h"
 #include "funcs.h"
 
+#include "Table.h"
+#include "storage.h"
+
+extern Storage globalStorage;
 extern Table table;
 
 extern float RAir;
 extern float RFuel;
-extern float a;
-extern float L0;
 
 namespace Ui {
 class EndCalc;

@@ -89,7 +89,7 @@ void EndCalc::on_pb_calcMix_clicked()
     float CpAir = ui->le_capAir->text().toFloat();
     float CpFuel = ui->le_capFuel->text().toFloat();
 
-    float CpMix = Cpmix(a, L0, CpAir, CpFuel); // a and L0 must takes from other module or FROM USER
+    float CpMix = Cpmix(globalStorage.get_a(), globalStorage.get_L0(), CpAir, CpFuel); // a and L0 must takes from other module or FROM USER
     ui->output_mix->setText(QString::number(CpMix));
 }
 

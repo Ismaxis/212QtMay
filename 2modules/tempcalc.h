@@ -2,15 +2,15 @@
 #define TEMPCALC_H
 
 #include <QDialog>
-#include "Table.h"
 #include "funcs.h"
+#include "Table.h"
+#include "storage.h"
 
+extern Storage globalStorage;
 extern Table table;
 
 extern float RFuel;
 extern float RAir;
-extern float a;
-extern float L0;
 
 namespace Ui {
 class TempCalc;

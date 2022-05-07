@@ -66,7 +66,7 @@ void DuringCalc::on_pb_calcMix_clicked()
     float CpAirAvg = ui->le_capAir->text().toFloat();
     float CpFuelAvg = ui->le_capFuel->text().toFloat();
 
-    float CAvgMix = Cpmix(a, L0, CpAirAvg, CpFuelAvg); // avg capacity of mix during process
+    float CAvgMix = Cpmix(globalStorage.get_a(), globalStorage.get_L0(), CpAirAvg, CpFuelAvg); // avg capacity of mix during process
 
     ui->output_mix->setText(QString::number(CAvgMix));
 }
