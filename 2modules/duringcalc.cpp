@@ -85,6 +85,17 @@ void DuringCalc::on_pb_calcFuel_clicked()
 
 void DuringCalc::on_pb_calcMix_clicked()
 {
+    if(local_a == -1)
+    {
+        QMessageBox::warning(this, "Error", "Enter value for alfa");
+        return;
+    }
+    if(local_L0 == -1)
+    {
+        QMessageBox::warning(this, "Error", "Enter value for L0");
+        return;
+    }
+
     float CpAirAvg = ui->le_capAir->text().toFloat();
     float CpFuelAvg = ui->le_capFuel->text().toFloat();
 

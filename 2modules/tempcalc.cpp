@@ -71,6 +71,17 @@ void TempCalc::on_pb_calcFuel_clicked()
 
 void TempCalc::on_pb_calcMix_clicked()
 {
+    if(local_a == -1)
+    {
+        QMessageBox::warning(this, "Error", "Enter value for alfa");
+        return;
+    }
+    if(local_L0 == -1)
+    {
+        QMessageBox::warning(this, "Error", "Enter value for L0");
+        return;
+    }
+
     float CpAir = ui->le_capAir->text().toFloat();
     float CpFuel = ui->le_capFuel->text().toFloat();
 
