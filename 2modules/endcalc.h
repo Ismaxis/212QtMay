@@ -2,8 +2,8 @@
 #define ENDCALC_H
 
 #include <QDialog>
+#include <QMessageBox>
 #include "funcs.h"
-
 #include "Table.h"
 #include "storage.h"
 
@@ -36,8 +36,12 @@ private slots:
 
     void on_pb_calcMix_clicked();
 
+    void on_pastePushButton_clicked();
+
 private:
     Ui::EndCalc *ui;
+    float local_a;
+    float local_L0;
 };
 
 #endif // ENDCALC_H
