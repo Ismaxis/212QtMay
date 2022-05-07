@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CapacityCalc</class>
+ <widget class="QDialog" name="CapacityCalc">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>441</width>
+    <height>276</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QPushButton" name="temp_button">
+     <property name="text">
+      <string>Temp Calc</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="end_button">
+     <property name="text">
+      <string>End Calc</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="during_button">
+     <property name="text">
+      <string>During Calc</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

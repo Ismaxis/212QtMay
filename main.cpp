@@ -1,6 +1,14 @@
 #include "mainwindow.h"
+#include "2modules/Table.h"
 
 #include <QApplication>
+
+Table table;
+
+float RFuel = 290.1;
+float RAir = 287.0;
+float a = 3;
+float L0 = 12;
 
 int main(int argc, char *argv[])
 {
