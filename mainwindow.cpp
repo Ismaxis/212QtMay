@@ -13,3 +13,10 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+void MainWindow::on_pb_2_clicked()
+{
+    CapacityCalc calcWin;
+    int result = calcWin.exec();
+}
+

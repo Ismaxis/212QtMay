@@ -10,9 +10,9 @@ public:
     Table()
     {
         Sheet reader;
-        reader.setPath("D:/C++/222Qt/air.csv");
+        reader.setPath("D:/C++/Qt/212QtMay/tables/air.csv");
         tables.push_back(reader.readAsFloat());
-        reader.setPath("D:/C++/222Qt/fuel.csv");
+        reader.setPath("D:/C++/Qt/212QtMay/tables/fuel.csv");
         tables.push_back(reader.readAsFloat());
     }
 
