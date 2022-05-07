@@ -32,7 +32,7 @@
      </spacer>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_3">
+     <widget class="QPushButton" name="pb_2">
       <property name="text">
        <string>Определение теплоемкости</string>
       </property>
@@ -55,7 +55,7 @@
      </spacer>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="pb_3">
       <property name="text">
        <string>Определение теплотворной способности топлива</string>
       </property>
@@ -78,7 +78,7 @@
      </spacer>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_4">
+     <widget class="QPushButton" name="pb_4">
       <property name="text">
        <string>Определение избытка воздуха</string>
       </property>
@@ -101,7 +101,7 @@
      </spacer>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="closePushButton">
       <property name="text">
        <string>Закрыть</string>
       </property>
@@ -114,7 +114,7 @@
  <resources/>
  <connections>
   <connection>
-   <sender>pushButton</sender>
+   <sender>closePushButton</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>close()</slot>
