@@ -12,8 +12,8 @@ float RAir = 287.0;
 
 int main(int argc, char *argv[])
 {
-    globalStorage.set_a(3.0f);
-    globalStorage.set_L0(12.0f);
+    globalStorage.set_a(3.0f); // 3 module work
+    globalStorage.set_L0(15.0f);
 
     QApplication a(argc, argv);
     MainWindow w;
