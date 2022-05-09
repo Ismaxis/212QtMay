@@ -7,6 +7,15 @@ EndCalc::EndCalc(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    //icon
+    QPixmap pix;
+    QDir dir("../212QtMay");
+    QString s = dir.absoluteFilePath("icon.png");
+    if(pix.load(s))
+    {
+        ui->icon->setPixmap(pix.scaled(ui->icon->size(),Qt::KeepAspectRatio));
+    }
+
     ui->le_workAir->hide();
     ui->le_workFuel->hide();
 

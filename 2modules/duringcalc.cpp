@@ -6,6 +6,15 @@ DuringCalc::DuringCalc(QWidget *parent) :
     ui(new Ui::DuringCalc)
 {
     ui->setupUi(this);
+    //icon
+    QPixmap pix;
+    QDir dir("../212QtMay");
+    QString s = dir.absoluteFilePath("icon.png");
+    if(pix.load(s))
+    {
+        ui->icon->setPixmap(pix.scaled(ui->icon->size(),Qt::KeepAspectRatio));
+    }
+
 
     if(!globalStorage.isEmpty_a())
     {
