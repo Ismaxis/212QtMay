@@ -1,8 +1,5 @@
 #include "funcsthermalcapacity.h"
-#include "storage.h"
-#include "../2modules/Sheet.h"
 
-extern Storage globalStorage;
 
 FuncsThermalCapacity::FuncsThermalCapacity()
 {

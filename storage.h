@@ -5,6 +5,12 @@
 /// \brief The Storage class
 /// stores and transfer data between modules
 ///
+///
+struct QStruct{
+    float QnpV;
+    float Qnpm;
+};
+
 class Storage
 {
 public:
@@ -12,22 +18,24 @@ public:
 
     void set_a(float value);
     void set_L0(float value);
-    void set_Q(float value);
+    void set_QnpV(float value);
+    void set_Qnpm(float value);
 
     float get_a();
     float get_L0();
-    float get_Q();
+    QStruct get_Q();
 
     bool isEmpty_a();
     bool isEmpty_L0();
-    bool isEmpty_Q();
+    bool isEmpty_QnpV();
+    bool isEmpty_Qnpm();
 
     /// myabe add a stack
     /// that holds a few previous calculations
 private:
     float a;
     float L0;
-    float Q;
+    QStruct Q;
 };
 
 #endif // STORAGE_H

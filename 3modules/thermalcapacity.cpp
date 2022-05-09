@@ -1,32 +1,16 @@
 #include "thermalcapacity.h"
 #include "ui_ThermalCapacity.h"
-#include "funcsthermalcapacity.h"
-#include "storage.h"
+
 
 ThermalCapacity::ThermalCapacity(QWidget *parent):
     QDialog(parent),
     ui(new Ui::ThermalCapacity)
 {
     ui->setupUi(this);
-}
 
-
-//QnpV, Qnpm, L0;
-
-ThermalCapacity::~ThermalCapacity()
-{
-    delete ui;
-}
-
-void ThermalCapacity::on_CalcL0_clicked()
-{
     Sheet excelTable;
-    std::vector<float> Q, C, M, m, P, K, n, L, fuelType;
-    excelTable.setPath("test.csv");
-    const std::vector<std::vector<float>> measurements = excelTable.readAsFloat();
-    float L0;
-    FuncsThermalCapacity ThermalCapacity;
-
+    excelTable.setPath("D:/Prog/QtMayModule3/212QtMay/3modules/test.csv");
+    auto measurements = excelTable.readAsFloat();
     for (const auto& measurement : measurements)
         {
             Q.push_back(measurement[0]);
@@ -39,11 +23,34 @@ void ThermalCapacity::on_CalcL0_clicked()
             L.push_back(measurement[7]);
             fuelType.push_back(measurement[8]);
         }
+}
 
-    L0 = ThermalCapacity.FuelRatio(M, K, C);
+ThermalCapacity::~ThermalCapacity()
+{
+    delete ui;
+}
+
+void ThermalCapacity::on_CalcL0_clicked()
+{
+    L0 = ThermalCapacityFunc.FuelRatio(M, K, C);
     globalStorage.set_L0(L0);
-
     ui->PrintL0->setNum(L0);
 }
 
+
+
+void ThermalCapacity::on_CalcQnpV_2_clicked()
+{
+    QnpV = ThermalCapacityFunc.FuelVolume(Q, C);
+    globalStorage.set_QnpV(QnpV);
+    ui->PrintQnpV->setNum(QnpV);
+}
+
+
+void ThermalCapacity::on_CalcQnpm_clicked()
+{
+    Qnpm = ThermalCapacityFunc.FuelWeight(Q, C, M, n, P, fuelType);
+    globalStorage.set_Qnpm(Qnpm);
+    ui->PrintQnpm->setNum(Qnpm);
+}
 

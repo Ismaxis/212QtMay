@@ -31,7 +31,7 @@ std::vector<std::vector<float>> Sheet::readAsFloat() const
   
         // read every column data of a row and
         // store it in a string variable, 'word'
-        while (getline(s, word, ';'))
+        while (getline(s, word, ','))
         {
             if(word.empty())
             {

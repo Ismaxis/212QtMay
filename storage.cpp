@@ -4,7 +4,8 @@ Storage::Storage()
 {
     a = -1.0f;
     L0 = -1.0f;
-    Q = -1.0f;
+    Q.QnpV = -1.0f;
+    Q.Qnpm = -1.0f;
 }
 
 void Storage::set_a(float value)
@@ -15,9 +16,11 @@ void Storage::set_L0(float value)
 {
     L0 = value;
 }
-void Storage::set_Q(float value)
-{
-    Q = value;
+void Storage::set_QnpV(float value){
+    Q.QnpV = value;
+}
+void Storage::set_Qnpm(float value){
+    Q.Qnpm = value;
 }
 
 float Storage::get_a()
@@ -28,7 +31,7 @@ float Storage::get_L0()
 {
     return L0;
 }
-float Storage::get_Q()
+QStruct Storage::get_Q()
 {
     return Q;
 }
@@ -41,9 +44,13 @@ bool Storage::isEmpty_L0()
 {
     return L0 == -1.0f;
 }
-bool Storage::isEmpty_Q()
+bool Storage::isEmpty_QnpV()
 {
-    return Q == -1.0f;
+    return Q.QnpV == -1.0f;
+}
+bool Storage::isEmpty_Qnpm()
+{
+    return Q.Qnpm == -1.0f;
 }
 
 

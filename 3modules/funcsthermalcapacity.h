@@ -2,7 +2,7 @@
 #define FUNCSTHERMALCAPACITY_H
 
 #include <QVector>
-#include "../2modules/Sheet.h"
+#include "../Sheet.h"
 
 class FuncsThermalCapacity
 {
