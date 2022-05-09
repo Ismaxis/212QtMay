@@ -7,6 +7,14 @@ TempCalc::TempCalc(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    QPixmap pix;
+    QDir dir("../212QtMay");
+    QString s = dir.absoluteFilePath("icon.png");
+    if(pix.load(s))
+    {
+        ui->icon->setPixmap(pix.scaled(ui->icon->size(),Qt::KeepAspectRatio));
+    }
+
     if(!globalStorage.isEmpty_a())
     {
         local_a = globalStorage.get_a();

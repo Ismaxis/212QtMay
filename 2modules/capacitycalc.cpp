@@ -8,7 +8,9 @@ CapacityCalc::CapacityCalc(QWidget *parent) :
     ui->setupUi(this);
 
     QPixmap pix;
-    if(pix.load(QString::asprintf("D:/C++/Qt/212QtMay/icon.png")))
+    QDir dir("../212QtMay");
+    QString s = dir.absoluteFilePath("icon.png");
+    if(pix.load(s))
     {
         ui->icon->setPixmap(pix.scaled(ui->icon->size(),Qt::KeepAspectRatio));
     }
@@ -21,8 +23,9 @@ CapacityCalc::~CapacityCalc()
 
 void CapacityCalc::on_temp_button_clicked()
 {
-    TempCalc calcWin(this);
-    calcWin.exec();
+    TempCalc calcWin;
+    calcWin.setWindowFlags(Qt::FramelessWindowHint);
+    int result = calcWin.exec();
 }
 
 void CapacityCalc::on_end_button_clicked()
