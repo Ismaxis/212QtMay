@@ -6,12 +6,68 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>426</width>
-    <height>273</height>
+    <width>430</width>
+    <height>290</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>430</width>
+    <height>290</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>430</width>
+    <height>290</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>During</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog{
+	background:#131823;
+}
+
+QLabel{
+	color: #FFF;
+	font-size: 14px;
+}
+QLineEdit{
+	color: #536784;
+	border: 1px solid #324054;
+	font-size: 12px;
+}
+QRadioButton{
+	color: #FFF;
+}
+
+
+QGroupBox{
+	border: 1px solid qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(65, 154, 232, 255), stop:0.5 rgba(41, 139, 147, 255), stop:1 rgba(0, 113, 122, 255));
+	margin: 3px;
+	padding: 5px;
+	color: #536784;
+}
+
+
+QPushButton{
+	background: #131823;
+    border: 1px solid qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(65, 154, 232, 255), stop:0.5 rgba(41, 139, 147, 255), stop:1 rgba(0, 113, 122, 255));
+	border-radius: 5px;
+	padding: 5 px 5px 5px 5px;
+	color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(65, 154, 232, 255), stop:0.5 rgba(41, 139, 147, 255), stop:1 rgba(0, 113, 122, 255));
+	font-weight: 800;
+}
+QPushButton:hover {
+    background:qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(65, 154, 232, 255), stop:0.5 rgba(41, 139, 147, 255), stop:1 rgba(0, 113, 122, 255)); 
+	color: #FFF;
+}
+
+QPushButton:pressed {
+    background:#0E1012;
+}   </string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="4" rowspan="2">
