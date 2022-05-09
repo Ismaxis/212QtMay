@@ -47,9 +47,6 @@ QPushButton:hover {
 
 QPushButton:pressed {
     background:#0E1012;
-	QGraphicsDropShadowEffect* effect = new QGraphicsDropShadowEffect( );
-    	effect-&gt;setBlurRadius( 5 );
-    	mStartButton-&gt;setGraphicsEffect( effect );
 }   </string>
   </property>
   <widget class="QWidget" name="titlewidget" native="true">
