@@ -16,7 +16,6 @@ SOURCES += \
     2modules/tempcalc.cpp \
     3modules/funcsthermalcapacity.cpp \
     3modules/thermalcapacity.cpp \
-    Sheet.cpp \
     main.cpp \
     mainwindow.cpp \
     storage.cpp
@@ -31,7 +30,6 @@ HEADERS += \
     2modules/tempcalc.h \
     3modules/funcsthermalcapacity.h \
     3modules/thermalcapacity.h \
-    Sheet.h \
     mainwindow.h \
     storage.h
 
