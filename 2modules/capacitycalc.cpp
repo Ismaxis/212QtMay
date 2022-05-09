@@ -33,6 +33,7 @@ void CapacityCalc::on_end_button_clicked()
 
 void CapacityCalc::on_during_button_clicked()
 {
-    DuringCalc calcWin(this);
-    calcWin.exec();
+    DuringCalc calcWin;
+    calcWin.setWindowFlags(Qt::FramelessWindowHint);
+    int result = calcWin.exec();
 }
