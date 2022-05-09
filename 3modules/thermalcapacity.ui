@@ -32,33 +32,7 @@
    <string>Module3</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QDialog{
-	background:#131823;
-}
-
-QLabel{
-	color: #FFF;
-	font-size: 14px;
-}
-QLineEdit{
-	color: #536784;
-	border: 1px solid #324054;
-	font-size: 12px;
-}
-QRadioButton{
-	color: #FFF;
-}
-
-
-QGroupBox{
-	border: 1px solid qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(65, 154, 232, 255), stop:0.5 rgba(41, 139, 147, 255), stop:1 rgba(0, 113, 122, 255));
-	margin: 3px;
-	padding: 5px;
-	color: #536784;
-}
-
-
-QPushButton{
+   <string notr="true">QPushButton{
 	background: #131823;
 	font-size: 14px;
     border: 1px solid qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(65, 154, 232, 255), stop:0.5 rgba(41, 139, 147, 255), stop:1 rgba(0, 113, 122, 255));
@@ -71,10 +45,27 @@ QPushButton:hover {
     background:qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(65, 154, 232, 255), stop:0.5 rgba(41, 139, 147, 255), stop:1 rgba(0, 113, 122, 255)); 
 	color: #FFF;
 }
-
 QPushButton:pressed {
     background:#0E1012;
-}   </string>
+}    
+
+QDialog{
+	background:#131823;
+}
+
+QLabel{
+	color: #FFF;
+	font-size: 14px;
+}
+QRadioButton{
+	color: #FFF;
+}
+QGroupBox{
+	border: 1px solid qlineargradient( x1:0, y1:1, x2:1, y2:1, stop:0 rgba(65, 154, 232, 255), stop:0.5 rgba(41, 139, 147, 255), stop:1 rgba(0, 113, 122, 255));
+	margin: 3px;
+	padding: 5px;
+	color: #536784;
+}</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_4">
    <item row="0" column="0">
@@ -141,7 +132,7 @@ QPushButton:pressed {
          </font>
         </property>
         <property name="text">
-         <string>Qнp по V</string>
+         <string>Qnp by V</string>
         </property>
        </widget>
       </item>
@@ -188,8 +179,11 @@ QPushButton:pressed {
           <bold>true</bold>
          </font>
         </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
         <property name="text">
-         <string>Qнp по m</string>
+         <string>Qnp by m</string>
         </property>
        </widget>
       </item>

@@ -9,10 +9,15 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     QPixmap pix;
-    if(pix.load(QString::asprintf("D:/Prog/QtMayModule3/212QtMay/icon.png")))
+    if(pix.load(QString::asprintf("D:/C++/Qt/212QtMay/icon.png")))
     {
         ui->icon->setPixmap(pix.scaled(ui->icon->size(),Qt::KeepAspectRatio));
     }
+    if(pix.load(QString::asprintf("D:/C++/Qt/212QtMay/logo.png")))
+    {
+        ui->logo->setPixmap(pix.scaled(ui->logo->size(),Qt::KeepAspectRatio));
+    }
+
 }
 
 MainWindow::~MainWindow()
