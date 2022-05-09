@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "3modules/thermalcapacity.h"
 #include "ui_mainwindow.h"
+#include <QDir>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -9,11 +10,14 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     QPixmap pix;
-    if(pix.load(QString::asprintf("D:/C++/Qt/212QtMay/icon.png")))
+    QDir dir("../212QtMay");
+    QString s = dir.absoluteFilePath("icon.png");
+    if(pix.load(s))
     {
         ui->icon->setPixmap(pix.scaled(ui->icon->size(),Qt::KeepAspectRatio));
     }
-    if(pix.load(QString::asprintf("D:/C++/Qt/212QtMay/logo.png")))
+    s = dir.absoluteFilePath("logo.png");
+    if(pix.load(s))
     {
         ui->logo->setPixmap(pix.scaled(ui->logo->size(),Qt::KeepAspectRatio));
     }

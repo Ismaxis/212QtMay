@@ -1,8 +1,9 @@
 #ifndef TABLE_H
 #define TABLE_H
 
+#include <QDir>
 #include "Sheet.h"
-#include "tableData.h"
+#include "2modules/tableData.h"
 
 class Table
 {
@@ -10,9 +11,10 @@ public:
     Table()
     {
         Sheet reader;
-        reader.setPath("D:/C++/Qt/212QtMay/tables/air.csv");
+        QDir dir("../212QtMay/tables");
+        reader.setPath(dir.absoluteFilePath("air.csv").toStdString());
         tables.push_back(reader.readAsFloat());
-        reader.setPath("D:/C++/Qt/212QtMay/tables/fuel.csv");
+        reader.setPath(dir.absoluteFilePath("fuel.csv").toStdString());
         tables.push_back(reader.readAsFloat());
     }
 

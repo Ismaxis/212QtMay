@@ -22,7 +22,6 @@ SOURCES += \
     storage.cpp
 
 HEADERS += \
-    2modules/Table.h \
     2modules/capacitycalc.h \
     2modules/duringcalc.h \
     2modules/endcalc.h \
@@ -32,6 +31,7 @@ HEADERS += \
     3modules/funcsthermalcapacity.h \
     3modules/thermalcapacity.h \
     Sheet.h \
+    Table.h \
     mainwindow.h \
     storage.h
 
