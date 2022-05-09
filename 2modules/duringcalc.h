@@ -4,7 +4,7 @@
 #include <QDialog>
 #include <QMessageBox>
 #include "funcs.h"
-#include "Table.h"
+#include "../Table.h"
 #include "storage.h"
 
 extern Storage globalStorage;

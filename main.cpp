@@ -1,5 +1,5 @@
 #include "mainwindow.h"
-#include "2modules/Table.h"
+#include "Table.h"
 #include "storage.h"
 
 #include <QApplication>

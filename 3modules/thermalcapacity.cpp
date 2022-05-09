@@ -1,3 +1,4 @@
+#include <QDir>
 #include "thermalcapacity.h"
 #include "ui_ThermalCapacity.h"
 
@@ -9,7 +10,8 @@ ThermalCapacity::ThermalCapacity(QWidget *parent):
     ui->setupUi(this);
 
     Sheet excelTable;
-    excelTable.setPath("D:/Prog/QtMayModule3/212QtMay/3modules/test.csv");
+    QDir dir("../212QtMay/tables");
+    excelTable.setPath((dir.absoluteFilePath("test.csv").toStdString()));
     auto measurements = excelTable.readAsFloat();
     for (const auto& measurement : measurements)
         {
