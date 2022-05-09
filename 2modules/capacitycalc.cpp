@@ -6,6 +6,12 @@ CapacityCalc::CapacityCalc(QWidget *parent) :
     ui(new Ui::CapacityCalc)
 {
     ui->setupUi(this);
+
+    QPixmap pix;
+    if(pix.load(QString::asprintf("D:/Prog/QtMayModule3/212QtMay/icon.png")))
+    {
+        ui->icon->setPixmap(pix.scaled(ui->icon->size(),Qt::KeepAspectRatio));
+    }
 }
 
 CapacityCalc::~CapacityCalc()
