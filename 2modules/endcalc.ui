@@ -18,6 +18,7 @@
 	background:#131823;
 }
 
+
 QLabel{
 	color: #98b0d4;
 	font-size: 14px;
