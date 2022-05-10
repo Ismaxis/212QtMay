@@ -29,8 +29,6 @@ ThermalCapacity::ThermalCapacity(QWidget *parent):
             P.push_back(measurement[4]);
             K.push_back(measurement[5]);
             n.push_back(measurement[6]);
-            L.push_back(measurement[7]);
-            fuelType.push_back(measurement[8]);
         }
 }
 
@@ -58,7 +56,7 @@ void ThermalCapacity::on_CalcQnpV_2_clicked()
 
 void ThermalCapacity::on_CalcQnpm_clicked()
 {
-    Qnpm = ThermalCapacityFunc.FuelWeight(Q, C, M, n, P, fuelType);
+    Qnpm = ThermalCapacityFunc.FuelWeight(Q, C, M, n, P);
     globalStorage.set_Qnpm(Qnpm);
     ui->PrintQnpm->setNum(Qnpm);
 }
