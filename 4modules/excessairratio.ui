@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ExcessAirRatio</class>
+ <widget class="QDialog" name="ExcessAirRatio">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../icon.png</normaloff>../icon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">windowTitle{
+	background:#131823;
+}
+QWidget{
+	background:#131823;
+}
+
+QPushButton{
+	background: #131823;
+	font-size: 14px;
+    border: 1px solid qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(65, 154, 232, 255), stop:0.5 rgba(41, 139, 147, 255), stop:1 rgba(0, 113, 122, 255));
+	border-radius: 5px;
+	padding: 5 px 5px 5px 5px;
+	color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(65, 154, 232, 255), stop:0.5 rgba(41, 139, 147, 255), stop:1 rgba(0, 113, 122, 255));
+	font-weight: 800;
+}
+QPushButton:hover {
+    background:qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(65, 154, 232, 255), stop:0.5 rgba(41, 139, 147, 255), stop:1 rgba(0, 113, 122, 255)); 
+	color: #FFF;
+}
+
+QPushButton:pressed {
+    background:#0E1012;
+}   </string>
+  </property>
+  <widget class="QWidget" name="titlewidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>400</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>400</width>
+     <height>31</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>400</width>
+     <height>31</height>
+    </size>
+   </property>
+   <property name="baseSize">
+    <size>
+     <width>0</width>
+     <height>25</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget{
+	border-bottom:1px solid qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(65, 154, 232, 255), stop:0.5 rgba(41, 139, 147, 255), stop:1 rgba(0, 113, 122, 255));
+}
+
+QPushButton{
+	border-radius: 0px;
+	background-color: rgba(255, 255, 128, 0);
+}
+QPushButton:hover {
+    background:qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(65, 154, 232, 255), stop:0.5 rgba(41, 139, 147, 255), stop:1 rgba(0, 113, 122, 255)); 
+	color: #FFF;
+}
+
+QPushButton:pressed {
+    background:#0E1012;
+	background-color: rgba(255, 255, 128, 0);
+}   
+QLabel{
+	color:qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(73, 232, 232, 255), stop:1 rgba(21, 222, 238, 255)); 
+}</string>
+   </property>
+   <widget class="QPushButton" name="exitpb">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>0</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>-1</pointsize>
+      <weight>99</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-bottom-width: 0px;
+border-top-width: 0px;
+
+font-weight: 900;
+font-size: 18px;
+padding: 0px 1px 0px 0px;</string>
+    </property>
+    <property name="text">
+     <string>X</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="windowTitle">
+    <property name="geometry">
+     <rect>
+      <x>32</x>
+      <y>5</y>
+      <width>251</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-bottom-width: 0px;</string>
+    </property>
+    <property name="text">
+     <string>Определение коэффициента избытка воздуха</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="windowIcon">
+    <property name="geometry">
+     <rect>
+      <x>2</x>
+      <y>2</y>
+      <width>25</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-bottom-width: 0px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
