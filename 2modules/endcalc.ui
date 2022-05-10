@@ -28,6 +28,7 @@ QLineEdit{
 	background: #131823;
 	border: 1px solid qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(65, 154, 232, 255), stop:0.5 rgba(41, 139, 147, 255), stop:1 rgba(0, 113, 122, 255));
 	font-size: 12px;
+	border-radius: 2px;
 }
 
 QRadioButton{
@@ -50,6 +51,7 @@ QGroupBox{
 	margin: 3px;
 	padding: 5px;
 	color: #536784;
+	border-radius: 2px;
 }
 
 QPushButton{
