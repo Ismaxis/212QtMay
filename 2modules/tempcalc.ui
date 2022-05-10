@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>500</width>
-    <height>300</height>
+    <width>550</width>
+    <height>380</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -75,9 +75,9 @@ QPushButton:pressed {
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>40</y>
-     <width>500</width>
-     <height>260</height>
+     <y>31</y>
+     <width>550</width>
+     <height>350</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout_3">
@@ -332,7 +332,7 @@ QPushButton:pressed {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>500</width>
+     <width>550</width>
      <height>31</height>
     </rect>
    </property>
@@ -379,7 +379,7 @@ QLabel{
    <widget class="QPushButton" name="closePushButton">
     <property name="geometry">
      <rect>
-      <x>471</x>
+      <x>520</x>
       <y>0</y>
       <width>31</width>
       <height>31</height>
