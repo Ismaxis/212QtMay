@@ -23,8 +23,9 @@ CapacityCalc::~CapacityCalc()
 
 void CapacityCalc::on_temp_button_clicked()
 {
-    TempCalc calcWin(this);
-    calcWin.exec();
+    TempCalc calcWin;
+    calcWin.setWindowFlags(Qt::FramelessWindowHint);
+    int result = calcWin.exec();
 }
 
 void CapacityCalc::on_end_button_clicked()
