@@ -105,6 +105,7 @@ QPushButton:pressed {
        <property name="font">
         <font>
          <pointsize>-1</pointsize>
+         <weight>99</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -159,6 +160,7 @@ QPushButton:pressed {
        <property name="font">
         <font>
          <pointsize>-1</pointsize>
+         <weight>99</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -200,6 +202,9 @@ QPushButton:pressed {
      <string>L0</string>
     </property>
     <layout class="QGridLayout" name="gridLayout">
+     <property name="rightMargin">
+      <number>9</number>
+     </property>
      <item row="0" column="0">
       <widget class="QPushButton" name="CalcL0">
        <property name="sizePolicy">
@@ -211,6 +216,7 @@ QPushButton:pressed {
        <property name="font">
         <font>
          <pointsize>-1</pointsize>
+         <weight>99</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -302,6 +308,7 @@ QLabel{
      <font>
       <family>Consolas</family>
       <pointsize>-1</pointsize>
+      <weight>99</weight>
       <italic>false</italic>
       <bold>true</bold>
      </font>
