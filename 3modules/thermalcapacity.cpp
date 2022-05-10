@@ -1,7 +1,6 @@
-#include <QDir>
 #include "thermalcapacity.h"
 #include "ui_ThermalCapacity.h"
-
+#include <QDir>
 
 ThermalCapacity::ThermalCapacity(QWidget *parent):
     QDialog(parent),
@@ -9,10 +8,18 @@ ThermalCapacity::ThermalCapacity(QWidget *parent):
 {
     ui->setupUi(this);
 
+    QPixmap pix;
+    QDir dir("../212QtMay");
+    QString s = dir.absoluteFilePath("icon.png");
+    if(pix.load(s))
+    {
+        ui->icon->setPixmap(pix.scaled(ui->icon->size(),Qt::KeepAspectRatio));
+    }
+
     Sheet excelTable;
-    QDir dir("../212QtMay/tables");
-    excelTable.setPath((dir.absoluteFilePath("test.csv").toStdString()));
+    excelTable.setPath((dir.absoluteFilePath("tables/test.csv").toStdString()));
     auto measurements = excelTable.readAsFloat();
+
     for (const auto& measurement : measurements)
         {
             Q.push_back(measurement[0]);

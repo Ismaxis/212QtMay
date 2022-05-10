@@ -43,7 +43,9 @@ void MainWindow::on_pb_2_clicked()
 void MainWindow::on_pb_3_clicked()
 {
     ThermalCapacity calcCnp;
-    calcCnp.setModal(true);
-    int resoult = calcCnp.exec();
+    calcCnp.setWindowFlags(Qt::FramelessWindowHint);
+    this->hide();
+    int result = calcCnp.exec();
+    this->show();
 }
 
