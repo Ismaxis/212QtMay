@@ -29,7 +29,7 @@ private slots:
 
 private:
     Ui::ThermalCapacity *ui;
-    std::vector<float> Q, C, M, m, P, K, n, L, fuelType;
+    std::vector<float> Q, C, M, m, P, K, n;
     float QnpV, Qnpm, L0;
     FuncsThermalCapacity ThermalCapacityFunc;
 };

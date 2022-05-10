@@ -14,12 +14,12 @@ float FuncsThermalCapacity::FuelVolume(std::vector<float> Q, std::vector<float> 
     }
     return fuelVolumeAll;
 }
-float FuncsThermalCapacity::FuelWeight(std::vector<float> Q, std::vector<float> C, std::vector<float> M, std::vector<float> n, std::vector<float> P, std::vector<float> fuel_type) {
+float FuncsThermalCapacity::FuelWeight(std::vector<float> Q, std::vector<float> C, std::vector<float> M, std::vector<float> n, std::vector<float> P) {
     float fuelWeightAll = 0, mAll = 0,
         Qi, mi, Ci;
 
     for (int i = 0; i < Q.size(); i++) {
-        if (fuel_type[i] == 0.0f) {
+        if (P[i] == 0.0f) {
             mAll += M[i] * C[i];
         }
     }
@@ -27,7 +27,7 @@ float FuncsThermalCapacity::FuelWeight(std::vector<float> Q, std::vector<float> 
     for (int i = 0; i < Q.size(); i++) {
         //Если топливо газообразное
 
-        if (fuel_type[i] == 0.0f) {
+        if (P[i] == 0.0f) {
             mi = M[i] * n[i];
             Qi = Q[i] / mi;
             Ci = C[i] * (M[i] / mAll);
@@ -35,7 +35,7 @@ float FuncsThermalCapacity::FuelWeight(std::vector<float> Q, std::vector<float> 
             fuelWeightAll += Qi * Ci;
         }
         //Если топливо жидкое
-        if (fuel_type[i] == 1.0f) {
+        if (P[i] > 0.0f) {
             Qi = Q[i] / P[i];//Перевод из дж/м^3 в Дж/кг
             fuelWeightAll += + Qi * C[i];
 
