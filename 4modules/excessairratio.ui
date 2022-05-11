@@ -31,28 +31,15 @@ QLineEdit{
 	background: #131823;
 	border: 1px solid qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(65, 154, 232, 255), stop:0.5 rgba(41, 139, 147, 255), stop:1 rgba(0, 113, 122, 255));
 	font-size: 12px;
-}
-
-QRadioButton{
-	color: #98b0d4;
-}
-QRadioButton::indicator{
-    width: 14px;
-    height: 14px;
-    border-radius: 5px;
-}
-QRadioButton::indicator:checked {
-    background-color:  qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(65, 154, 232, 255), stop:0.5 rgba(41, 139, 147, 255), stop:1 rgba(0, 113, 122, 255));
-}
-QRadioButton::indicator:unchecked {
-    background-color: #144e52;
+	border-radius: 2px;
 }
 
 QGroupBox{
 	border: 1px solid qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(65, 154, 232, 255), stop:0.5 rgba(41, 139, 147, 255), stop:1 rgba(0, 113, 122, 255));
 	margin: 3px;
-	padding: 5px;
+	padding: 7px 5px 5px 5px;
 	color: #536784;
+	border-radius: 2px;
 }
 
 QPushButton{
@@ -61,6 +48,7 @@ QPushButton{
 	border-radius: 5px;
 	padding: 5 px 5px 5px 5px;
 	color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:1, stop:0 rgba(65, 154, 232, 255), stop:0.5 rgba(41, 139, 147, 255), stop:1 rgba(0, 113, 122, 255));
+	font-size: 14px;
 	font-weight: 800;
 }
 QPushButton:hover {
@@ -127,7 +115,6 @@ QLabel{
      <font>
       <family>Consolas</family>
       <pointsize>-1</pointsize>
-      <weight>99</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -159,7 +146,7 @@ font: 9pt &quot;MS Shell Dlg 2&quot;;
 </string>
     </property>
     <property name="text">
-     <string>Определение коэффициента избытка воздуха</string>
+     <string>Калькулятор коэффициента избытка воздуха</string>
     </property>
    </widget>
    <widget class="QLabel" name="windowIcon">
@@ -183,9 +170,9 @@ font: 9pt &quot;MS Shell Dlg 2&quot;;
    <property name="geometry">
     <rect>
      <x>196</x>
-     <y>210</y>
+     <y>220</y>
      <width>121</width>
-     <height>28</height>
+     <height>30</height>
     </rect>
    </property>
    <property name="text">
@@ -220,10 +207,10 @@ font: 9pt &quot;MS Shell Dlg 2&quot;;
   <widget class="QGroupBox" name="L0_2">
    <property name="geometry">
     <rect>
-     <x>190</x>
+     <x>180</x>
      <y>40</y>
-     <width>131</width>
-     <height>159</height>
+     <width>150</width>
+     <height>170</height>
     </rect>
    </property>
    <property name="title">
@@ -246,14 +233,14 @@ font: 9pt &quot;MS Shell Dlg 2&quot;;
     <item row="2" column="0">
      <widget class="QLabel" name="labelAirEndTemp">
       <property name="text">
-       <string>air end temp</string>
+       <string>Т воздуха конец</string>
       </property>
      </widget>
     </item>
     <item row="0" column="0">
      <widget class="QLabel" name="labelAirBeginTemp">
       <property name="text">
-       <string>air begin temp</string>
+       <string>Т воздуха начало</string>
       </property>
      </widget>
     </item>
@@ -274,7 +261,7 @@ font: 9pt &quot;MS Shell Dlg 2&quot;;
     <item row="4" column="0">
      <widget class="QLabel" name="labelFuelEndTemp">
       <property name="text">
-       <string>fuel end temp</string>
+       <string>Т топлива конец</string>
       </property>
      </widget>
     </item>
@@ -285,8 +272,8 @@ font: 9pt &quot;MS Shell Dlg 2&quot;;
     <rect>
      <x>10</x>
      <y>40</y>
-     <width>131</width>
-     <height>202</height>
+     <width>130</width>
+     <height>210</height>
     </rect>
    </property>
    <property name="title">

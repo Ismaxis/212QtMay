@@ -106,12 +106,11 @@ QPushButton:pressed {
        <property name="font">
         <font>
          <pointsize>-1</pointsize>
-         <weight>99</weight>
          <bold>true</bold>
         </font>
        </property>
        <property name="text">
-        <string>Qnp by V</string>
+        <string>Calc</string>
        </property>
       </widget>
      </item>
@@ -161,7 +160,6 @@ QPushButton:pressed {
        <property name="font">
         <font>
          <pointsize>-1</pointsize>
-         <weight>99</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -169,7 +167,7 @@ QPushButton:pressed {
         <string notr="true"/>
        </property>
        <property name="text">
-        <string>Qnp by m</string>
+        <string>Calc</string>
        </property>
       </widget>
      </item>
@@ -217,7 +215,6 @@ QPushButton:pressed {
        <property name="font">
         <font>
          <pointsize>-1</pointsize>
-         <weight>99</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -225,7 +222,7 @@ QPushButton:pressed {
         <string notr="true">text-size: 18px;</string>
        </property>
        <property name="text">
-        <string>L0</string>
+        <string>Calc</string>
        </property>
       </widget>
      </item>
@@ -309,7 +306,6 @@ QLabel{
      <font>
       <family>Consolas</family>
       <pointsize>-1</pointsize>
-      <weight>99</weight>
       <italic>false</italic>
       <bold>true</bold>
      </font>
@@ -345,7 +341,7 @@ padding: 0px 1px 0px 0px;</string>
      <string notr="true">border-bottom-width: 0px;</string>
     </property>
     <property name="text">
-     <string>Калькулятор теплоемкости</string>
+     <string>Калькулятор L0 и Qnp</string>
     </property>
    </widget>
    <widget class="QLabel" name="icon">

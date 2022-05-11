@@ -164,7 +164,7 @@ padding: 0px 1px 0px 0px;</string>
      <rect>
       <x>32</x>
       <y>5</y>
-      <width>181</width>
+      <width>251</width>
       <height>20</height>
      </rect>
     </property>
@@ -178,7 +178,7 @@ padding: 0px 1px 0px 0px;</string>
      <string notr="true">border-bottom-width: 0px;</string>
     </property>
     <property name="text">
-     <string>Калькулятор теплоемкости</string>
+     <string>Калькулятор теплоемкости в процессе</string>
     </property>
    </widget>
    <widget class="QLabel" name="icon">
