@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "3modules/thermalcapacity.h"
+#include "4modules/excessairratio.h"
 #include "ui_mainwindow.h"
 #include <QDir>
 
@@ -49,3 +50,12 @@ void MainWindow::on_pb_3_clicked()
     this->show();
 }
 
+
+void MainWindow::on_pb_4_clicked()
+{
+    ExcessAirRatio calcAlfa;
+    calcAlfa.setWindowFlags(Qt::FramelessWindowHint);
+    this->hide();
+    int result = calcAlfa.exec();
+    this->show();
+}

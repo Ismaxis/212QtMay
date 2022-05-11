@@ -16,6 +16,8 @@ SOURCES += \
     2modules/tempcalc.cpp \
     3modules/funcsthermalcapacity.cpp \
     3modules/thermalcapacity.cpp \
+    4modules/alfa.cpp \
+    4modules/excessairratio.cpp \
     Sheet.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -30,6 +32,8 @@ HEADERS += \
     2modules/tempcalc.h \
     3modules/funcsthermalcapacity.h \
     3modules/thermalcapacity.h \
+    4modules/alfa.h \
+    4modules/excessairratio.h \
     Sheet.h \
     Table.h \
     mainwindow.h \
@@ -41,6 +45,7 @@ FORMS += \
     2modules/endcalc.ui \
     2modules/tempcalc.ui \
     3modules/ThermalCapacity.ui \
+    4modules/excessairratio.ui \
     mainwindow.ui
 
 # Default rules for deployment.
