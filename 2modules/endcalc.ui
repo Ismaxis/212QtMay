@@ -80,6 +80,21 @@ QPushButton:pressed {
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>8</number>
+    </property>
+    <property name="topMargin">
+     <number>8</number>
+    </property>
+    <property name="rightMargin">
+     <number>8</number>
+    </property>
+    <property name="bottomMargin">
+     <number>8</number>
+    </property>
+    <property name="spacing">
+     <number>6</number>
+    </property>
     <item row="0" column="0">
      <widget class="QGroupBox" name="groupBox">
       <property name="title">
@@ -141,7 +156,7 @@ QPushButton:pressed {
        <item row="4" column="0" colspan="2">
         <widget class="QPushButton" name="pastePushButton">
          <property name="text">
-          <string>Paste</string>
+          <string>Вставить</string>
          </property>
         </widget>
        </item>
@@ -169,7 +184,7 @@ QPushButton:pressed {
        <item>
         <widget class="QRadioButton" name="radioButton_degree">
          <property name="text">
-          <string>degree ( comp/exp ) </string>
+          <string>t (comp/exp) </string>
          </property>
          <property name="checked">
           <bool>true</bool>
@@ -179,7 +194,7 @@ QPushButton:pressed {
        <item>
         <widget class="QRadioButton" name="radioButton_work">
          <property name="text">
-          <string>work</string>
+          <string>A (подведенная)</string>
          </property>
         </widget>
        </item>
@@ -189,7 +204,7 @@ QPushButton:pressed {
     <item row="0" column="2" rowspan="2">
      <widget class="QGroupBox" name="groupBox_mix">
       <property name="title">
-       <string>Mix</string>
+       <string>Смесь</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
@@ -224,7 +239,7 @@ QPushButton:pressed {
           <bool>false</bool>
          </property>
          <property name="text">
-          <string/>
+          <string>C (воздуха)</string>
          </property>
          <property name="placeholderText">
           <string>Air capacity</string>
@@ -235,6 +250,9 @@ QPushButton:pressed {
         <widget class="QLineEdit" name="le_capFuel">
          <property name="enabled">
           <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>С (топлива)</string>
          </property>
          <property name="readOnly">
           <bool>true</bool>
@@ -247,14 +265,14 @@ QPushButton:pressed {
        <item>
         <widget class="QPushButton" name="pb_calcMix">
          <property name="text">
-          <string>Calc</string>
+          <string>Рассчет</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="output_mix">
          <property name="text">
-          <string>Mix capacity</string>
+          <string>Теплоемкость смеси</string>
          </property>
         </widget>
        </item>
@@ -264,11 +282,14 @@ QPushButton:pressed {
     <item row="1" column="0">
      <widget class="QGroupBox" name="groupBox_air">
       <property name="title">
-       <string>Air</string>
+       <string>Воздух</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
         <widget class="QLineEdit" name="le_tempAir">
+         <property name="text">
+          <string>t</string>
+         </property>
          <property name="placeholderText">
           <string>temp</string>
          </property>
@@ -276,6 +297,9 @@ QPushButton:pressed {
        </item>
        <item>
         <widget class="QLineEdit" name="le_degreeAir">
+         <property name="text">
+          <string>t (comp)</string>
+         </property>
          <property name="placeholderText">
           <string>comp degree</string>
          </property>
@@ -283,6 +307,9 @@ QPushButton:pressed {
        </item>
        <item>
         <widget class="QLineEdit" name="le_workAir">
+         <property name="text">
+          <string>A (подведенная)</string>
+         </property>
          <property name="placeholderText">
           <string>work</string>
          </property>
@@ -290,6 +317,9 @@ QPushButton:pressed {
        </item>
        <item>
         <widget class="QLineEdit" name="le_effAir">
+         <property name="text">
+          <string>КПД</string>
+         </property>
          <property name="placeholderText">
           <string>eff</string>
          </property>
@@ -298,14 +328,14 @@ QPushButton:pressed {
        <item>
         <widget class="QPushButton" name="pb_calcAir">
          <property name="text">
-          <string>Calc</string>
+          <string>Рассчет</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="output_air">
          <property name="text">
-          <string>Air capacity</string>
+          <string>Теплоемкость воздуха</string>
          </property>
         </widget>
        </item>
@@ -315,11 +345,14 @@ QPushButton:pressed {
     <item row="1" column="1">
      <widget class="QGroupBox" name="groupBox_fuel">
       <property name="title">
-       <string>Fuel</string>
+       <string>Топливо</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
         <widget class="QLineEdit" name="le_tempFuel">
+         <property name="text">
+          <string>t</string>
+         </property>
          <property name="placeholderText">
           <string>temp</string>
          </property>
@@ -327,6 +360,9 @@ QPushButton:pressed {
        </item>
        <item>
         <widget class="QLineEdit" name="le_degreeFuel">
+         <property name="text">
+          <string>t (exp)</string>
+         </property>
          <property name="placeholderText">
           <string>exp degree</string>
          </property>
@@ -334,6 +370,9 @@ QPushButton:pressed {
        </item>
        <item>
         <widget class="QLineEdit" name="le_workFuel">
+         <property name="text">
+          <string>A (подведенная)</string>
+         </property>
          <property name="placeholderText">
           <string>work</string>
          </property>
@@ -341,6 +380,9 @@ QPushButton:pressed {
        </item>
        <item>
         <widget class="QLineEdit" name="le_effFuel">
+         <property name="text">
+          <string>КПД</string>
+         </property>
          <property name="placeholderText">
           <string>eff</string>
          </property>
@@ -349,14 +391,14 @@ QPushButton:pressed {
        <item>
         <widget class="QPushButton" name="pb_calcFuel">
          <property name="text">
-          <string>Calc</string>
+          <string>Рассчет</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="output_fuel">
          <property name="text">
-          <string>Fuel capacity</string>
+          <string>Теплоемкость топлива</string>
          </property>
         </widget>
        </item>
@@ -425,7 +467,6 @@ QLabel{
     </property>
     <property name="font">
      <font>
-      <family>Consolas</family>
       <pointsize>-1</pointsize>
       <italic>false</italic>
       <bold>true</bold>
@@ -434,6 +475,7 @@ QLabel{
     <property name="styleSheet">
      <string notr="true">border-bottom-width: 0px;
 border-top-width: 0px;
+border-right-width: 0px;
 
 font-weight: 900;
 font-size: 18px;
@@ -448,9 +490,15 @@ padding: 0px 1px 0px 0px;</string>
      <rect>
       <x>32</x>
       <y>5</y>
-      <width>181</width>
+      <width>301</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="font">
      <font>
@@ -462,7 +510,7 @@ padding: 0px 1px 0px 0px;</string>
      <string notr="true">border-bottom-width: 0px;</string>
     </property>
     <property name="text">
-     <string>Калькулятор теплоемкости</string>
+     <string>Калькулятор теплоемкости (в конце процесса)</string>
     </property>
    </widget>
    <widget class="QLabel" name="icon">
