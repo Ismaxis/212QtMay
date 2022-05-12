@@ -17,8 +17,13 @@ float Cpmix(float a, float L0, float CpAir, float CpFuel)
 float TendCompDegree(float Tstart, float degree, float R, float C,float eff)
 {
     float newC, buffC = C;
+    int counter = 0;
     while(true)
     {
+        if(counter > 100)
+        {
+            return -1;
+        }
         newC = Tstart + Tstart * (pow(degree, R/buffC) - 1) / eff;
         if(abs(newC - buffC) / buffC < 0.01f)
         {
@@ -26,6 +31,7 @@ float TendCompDegree(float Tstart, float degree, float R, float C,float eff)
             break;
         }
         buffC = newC;
+        counter++;
     }
     return buffC;
 }
@@ -34,8 +40,13 @@ float TendCompDegree(float Tstart, float degree, float R, float C,float eff)
 float TendCompWork(float Tstart, float work, float C, float eff)
 {
     float newC, buffC = C;
+    int counter = 0;
     while(true)
     {
+        if(counter > 100)
+        {
+            return -1;
+        }
         newC = Tstart + work / (eff * buffC);
         if(abs(newC - buffC) / buffC < 0.01f)
         {
@@ -43,6 +54,7 @@ float TendCompWork(float Tstart, float work, float C, float eff)
             break;
         }
         buffC = newC;
+        counter++;
     }
     return buffC;
 }
@@ -51,8 +63,13 @@ float TendCompWork(float Tstart, float work, float C, float eff)
 float TendExpDegree(float Tstart, float degree, float R, float C,float eff)
 {
     float newC, buffC = C;
+    int counter = 0;
     while(true)
     {
+        if(counter > 100)
+        {
+            return -1;
+        }
         newC = Tstart - Tstart * (1 - pow(degree, R/buffC)) * eff;
         if(abs(newC - buffC) / buffC < 0.01f)
         {
@@ -60,6 +77,7 @@ float TendExpDegree(float Tstart, float degree, float R, float C,float eff)
             break;
         }
         buffC = newC;
+        counter++;
     }
     return buffC;
 }
@@ -68,8 +86,13 @@ float TendExpDegree(float Tstart, float degree, float R, float C,float eff)
 float TendExpWork(float Tstart, float work, float C, float eff)
 {
     float newC, buffC = C;
+    int counter = 0;
     while(true)
     {
+        if(counter > 100)
+        {
+            return -1;
+        }
         newC = Tstart - (work * eff) / buffC;
         if(abs(newC - buffC) / buffC < 0.01f)
         {
@@ -77,6 +100,7 @@ float TendExpWork(float Tstart, float work, float C, float eff)
             break;
         }
         buffC = newC;
+        counter++;
     }
     return buffC;
 }
