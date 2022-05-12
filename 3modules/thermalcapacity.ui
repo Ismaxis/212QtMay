@@ -110,7 +110,7 @@ QPushButton:pressed {
         </font>
        </property>
        <property name="text">
-        <string>Qnp by V</string>
+        <string>Calc</string>
        </property>
       </widget>
      </item>
@@ -167,7 +167,7 @@ QPushButton:pressed {
         <string notr="true"/>
        </property>
        <property name="text">
-        <string>Qnp by m</string>
+        <string>Calc</string>
        </property>
       </widget>
      </item>
@@ -201,6 +201,9 @@ QPushButton:pressed {
      <string>L0</string>
     </property>
     <layout class="QGridLayout" name="gridLayout">
+     <property name="rightMargin">
+      <number>9</number>
+     </property>
      <item row="0" column="0">
       <widget class="QPushButton" name="CalcL0">
        <property name="sizePolicy">
@@ -219,7 +222,7 @@ QPushButton:pressed {
         <string notr="true">text-size: 18px;</string>
        </property>
        <property name="text">
-        <string>L0</string>
+        <string>Calc</string>
        </property>
       </widget>
      </item>
@@ -338,7 +341,7 @@ padding: 0px 1px 0px 0px;</string>
      <string notr="true">border-bottom-width: 0px;</string>
     </property>
     <property name="text">
-     <string>Калькулятор теплоемкости</string>
+     <string>Калькулятор L0 и Qnp</string>
     </property>
    </widget>
    <widget class="QLabel" name="icon">

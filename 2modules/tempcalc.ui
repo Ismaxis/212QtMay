@@ -452,7 +452,7 @@ padding: 0px 1px 0px 0px;</string>
      <string notr="true">border-bottom-width: 0px;</string>
     </property>
     <property name="text">
-     <string>Калькулятор теплоемкости (по температуре)</string>
+     <string>Калькулятор теплоемкости по температуре</string>
     </property>
    </widget>
    <widget class="QLabel" name="icon">

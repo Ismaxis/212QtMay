@@ -21,6 +21,8 @@ private slots:
 
     void on_pb_3_clicked();
 
+    void on_pb_4_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
