@@ -60,4 +60,14 @@ void MainWindow::on_pb_4_clicked()
     this->show();
 }
 
+void MainWindow::mousePressEvent(QMouseEvent* event)
+{
+    curPos = event->globalPos();
+}
 
+void MainWindow::mouseMoveEvent(QMouseEvent* event)
+{
+    posChange = event->globalPos() - curPos;
+    move(x() + posChange.x(), y() + posChange.y());
+    curPos = event->globalPos();
+}

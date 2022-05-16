@@ -110,7 +110,7 @@ QPushButton:pressed {
         </font>
        </property>
        <property name="text">
-        <string>Calc</string>
+        <string>Рассчет</string>
        </property>
       </widget>
      </item>
@@ -167,7 +167,7 @@ QPushButton:pressed {
         <string notr="true"/>
        </property>
        <property name="text">
-        <string>Calc</string>
+        <string>Рассчет</string>
        </property>
       </widget>
      </item>
@@ -222,7 +222,7 @@ QPushButton:pressed {
         <string notr="true">text-size: 18px;</string>
        </property>
        <property name="text">
-        <string>Calc</string>
+        <string>Рассчет</string>
        </property>
       </widget>
      </item>

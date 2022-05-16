@@ -359,13 +359,13 @@ padding: 0px 1px 0px 0px;</string>
           <bool>false</bool>
          </property>
          <property name="text">
-          <string>alfa</string>
+          <string/>
          </property>
          <property name="readOnly">
           <bool>false</bool>
          </property>
          <property name="placeholderText">
-          <string>Alfa</string>
+          <string>alfa</string>
          </property>
         </widget>
        </item>
@@ -385,10 +385,10 @@ padding: 0px 1px 0px 0px;</string>
           <bool>false</bool>
          </property>
          <property name="text">
-          <string>C (воздуха)</string>
+          <string/>
          </property>
          <property name="placeholderText">
-          <string>Air capacity</string>
+          <string>C воздуха</string>
          </property>
         </widget>
        </item>
@@ -398,7 +398,7 @@ padding: 0px 1px 0px 0px;</string>
           <bool>false</bool>
          </property>
          <property name="text">
-          <string>C (топлива)</string>
+          <string/>
          </property>
          <property name="frame">
           <bool>true</bool>
@@ -407,7 +407,7 @@ padding: 0px 1px 0px 0px;</string>
           <bool>true</bool>
          </property>
          <property name="placeholderText">
-          <string>Fuel capacity</string>
+          <string>C топлива</string>
          </property>
         </widget>
        </item>
@@ -437,20 +437,20 @@ padding: 0px 1px 0px 0px;</string>
        <item>
         <widget class="QLineEdit" name="le_tempStartAir">
          <property name="text">
-          <string>t (начальная)</string>
+          <string/>
          </property>
          <property name="placeholderText">
-          <string>temp start</string>
+          <string>T начальная</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLineEdit" name="le_tempEndAir">
          <property name="text">
-          <string>t (конечная)</string>
+          <string/>
          </property>
          <property name="placeholderText">
-          <string>temp end</string>
+          <string>T конечная</string>
          </property>
         </widget>
        </item>
@@ -480,20 +480,20 @@ padding: 0px 1px 0px 0px;</string>
        <item>
         <widget class="QLineEdit" name="le_tempStartFuel">
          <property name="text">
-          <string>t (начальная)</string>
+          <string/>
          </property>
          <property name="placeholderText">
-          <string>temp start</string>
+          <string>T начальная</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLineEdit" name="le_tempEndFuel">
          <property name="text">
-          <string>t (конечная)</string>
+          <string/>
          </property>
          <property name="placeholderText">
-          <string>temp end</string>
+          <string>T конечная</string>
          </property>
         </widget>
        </item>

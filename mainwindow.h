@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QMouseEvent>
+#include <QPoint>
+
 #include "2modules/capacitycalc.h"
 
 QT_BEGIN_NAMESPACE
@@ -25,5 +28,11 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    void mousePressEvent(QMouseEvent* event);
+    void mouseMoveEvent(QMouseEvent* event);
+
+    QPoint curPos;
+    QPoint posChange;
+
 };
 #endif // MAINWINDOW_H
